@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #include "Const.h"
 #include "Board.h"
 
@@ -10,4 +11,19 @@ int main() {
 
 	viewChessBoard(chessBoard);
 	
+=======
+#include <iostream>
+#include "const.h"
+#include "tablero.h"
+#include "utils.h"
+
+int main() 
+{
+
+	char chesstBoard [BOARD_SIZE][BOARD_SIZE];
+
+	initChessBoard(chesstBoard);
+
+	viewChessBoard(chesstBoard);
+>>>>>>> Stashed changes
 }

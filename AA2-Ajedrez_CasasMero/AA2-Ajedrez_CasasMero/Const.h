@@ -1,23 +1,24 @@
 #pragma once
 
-//Includes
+//INCLUDES
 #include <iostream>
 
 
-//Defines
+//DEFINES
 #define BOARD_SIZE 8
 #define EMPTY '*'
 
-
-//Piezas Blancas
+//Piezas WHITE
+	
 #define WHITE_PAWN 'P'
-#define WHITE_ROOK 'T'
-#define WHITE_BISHOP 'B'
-#define WHITE_KNIGHT 'H'
-#define WHITE_QUEEN 'Q'
-#define WHITE_KING 'K'
+#define WHITE_ROOK  'T'
+#define WHITE_BISHOP  'B'
+#define WHITE_KNIGHT  'H'
+#define WHITE_QUEEN  'Q'
+#define WHITE_KING  'K'
 
-//Piezas Negras
+//Piezas BLAKS
+
 #define BLACK_PAWN 'p'
 #define BLACK_ROOK 't'
 #define BLACK_BISHOP 'b'

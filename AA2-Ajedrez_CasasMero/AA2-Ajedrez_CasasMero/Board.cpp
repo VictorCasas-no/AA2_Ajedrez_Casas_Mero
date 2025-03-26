@@ -1,4 +1,7 @@
 #include "Const.h"
+#include "Utils.h"
+
+#pragma region initChessBoard;
 
 void initChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 
@@ -70,6 +73,10 @@ void initChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 
 }
 
+#pragma endregion;
+
+#pragma region viewChessBoard;
+
 void viewChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 
 	std::cout << ' ' << ' ';
@@ -87,5 +94,13 @@ void viewChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 		}
 		std::cout << std::endl;
 	}
+
+}
+
+#pragma endregion;
+
+void getPieceByUser() {
+
+	Position getPieceByUser;
 
 }

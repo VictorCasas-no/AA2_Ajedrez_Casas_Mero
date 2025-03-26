@@ -99,8 +99,55 @@ void viewChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 
 #pragma endregion;
 
-void getPieceByUser() {
+Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn) {
 
-	Position getPieceByUser;
+	Position userGetPiece;
+
+	bool isGettingAPiece = true;
+
+	do {
+
+		bool isGettingAPiece = true;
+
+
+		//Pedir al jugador ficha
+		std::cout << std::endl;								//Añade una línea vacía entre el tablero y lo siguiente
+		std::cout << "Elige una pieza: ";                   //Pide una altura a la que atacar
+		std::cout << "X: ";									//Posición X que el usuario indica
+		std::cin >> userGetPiece.x;							//Registra la altura dicha por el usuario
+		std::cout << "Y: ";									//Pide una Y que el usuario indica
+		std::cin >> userGetPiece.y;
+
+
+		//Pedir al jugador dónde mover
+		std::cout << "Altura a la cual mover: ";            //Pide una altura a la que mover
+		std::cin >> x;										//Registra el ancho dicho por el usuario
+		std::cout << "Posición a lo ancho donde mover: ";   //Pide el ancho al cual mover
+		std::cin >> y;										//Registra la altura dicha por el usuario
+
+
+		userGetPiece.x--;
+		userGetPiece.y--;
+
+		userGetPiece.y = BOARD_SIZE - userGetPiece.y;
+
+
+		if (userGetPiece.x < 0 && userGetPiece.x > BOARD_SIZE || userGetPiece.y < 1 && userGetPiece.y > BOARD_SIZE) {
+
+			std::cout << "Invalid input. Out of bounds." << std::endl;
+			isGettingAPiece = false;
+
+		}
+		else if ((isWhiteTurn && chessBoard[userGetPiece.x][userGetPiece.y] >= 'a' && chessBoard[userGetPiece.x][userGetPiece.y] <= 'z') ||
+			(isBlackTurn && chessBoard[userGetPiece.x][userGetPiece.y] >= 'A' && chessBoard[userGetPiece.x][userGetPiece.y] <= 'Z')) {
+
+			std::cout << "Invalid input. You're trying to get an opp's piece." << std::endl;
+			isGettingAPiece = false;
+
+		}
+
+	} while (!isGettingAPiece);
+
+
 
 }

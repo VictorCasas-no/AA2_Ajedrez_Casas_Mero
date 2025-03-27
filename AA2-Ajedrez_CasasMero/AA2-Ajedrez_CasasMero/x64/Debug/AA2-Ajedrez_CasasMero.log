@@ -1,6 +1,5 @@
 ﻿  Board.cpp
-<<<<<<< Updated upstream
-  AA2-Ajedrez_CasasMero.vcxproj -> C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe
-=======
-  AA2-Ajedrez_CasasMero.vcxproj -> C:\Users\JosepAntoniMeroAvila\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe
->>>>>>> Stashed changes
+C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\Board.cpp(104,11): warning C4101: 'getPieceByUser': unreferenced local variable
+  main.cpp
+C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\Board.h(11,6): error C2182: 'setPieceByUser': this use of 'void' is not valid
+  Generating Code...

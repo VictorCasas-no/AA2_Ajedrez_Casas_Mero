@@ -127,22 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Board.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Const.h" />
     <ClInclude Include="Board.h" />
-=======
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="const.h" />
-    <ClInclude Include="tablero.h" />
     <ClInclude Include="Utils.h" />
->>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

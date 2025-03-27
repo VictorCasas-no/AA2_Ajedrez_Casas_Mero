@@ -2,11 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-<<<<<<< Updated upstream
       <FullPath>C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe</FullPath>
-=======
-      <FullPath>C:\Users\JosepAntoniMeroAvila\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe</FullPath>
->>>>>>> Stashed changes
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

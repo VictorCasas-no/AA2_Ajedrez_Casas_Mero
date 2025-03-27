@@ -7,6 +7,6 @@ void initChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]);
 
 void viewChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]);
 
-Position getPieceByUser();
+Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn);
 
-void setPieceByUser;
+Position setPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn); 

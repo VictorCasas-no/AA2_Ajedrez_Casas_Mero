@@ -99,7 +99,8 @@ void viewChessBoard(char chessBoard[BOARD_SIZE][BOARD_SIZE]) {
 
 #pragma endregion;
 
-Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn) {
+Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn) 
+{
 
 	Position userGetPiece;
 
@@ -107,8 +108,7 @@ Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTur
 
 	do {
 
-		bool isGettingAPiece = true;
-
+		bool isGettingAPiece = false;
 
 		//Pedir al jugador ficha
 		std::cout << std::endl;								//Añade una línea vacía entre el tablero y lo siguiente
@@ -117,14 +117,6 @@ Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTur
 		std::cin >> userGetPiece.x;							//Registra la altura dicha por el usuario
 		std::cout << "Y: ";									//Pide una Y que el usuario indica
 		std::cin >> userGetPiece.y;
-
-
-		//Pedir al jugador dónde mover
-		std::cout << "Altura a la cual mover: ";            //Pide una altura a la que mover
-		std::cin >> x;										//Registra el ancho dicho por el usuario
-		std::cout << "Posición a lo ancho donde mover: ";   //Pide el ancho al cual mover
-		std::cin >> y;										//Registra la altura dicha por el usuario
-
 
 		userGetPiece.x--;
 		userGetPiece.y--;
@@ -139,15 +131,59 @@ Position getPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTur
 
 		}
 		else if ((isWhiteTurn && chessBoard[userGetPiece.x][userGetPiece.y] >= 'a' && chessBoard[userGetPiece.x][userGetPiece.y] <= 'z') ||
-			(isBlackTurn && chessBoard[userGetPiece.x][userGetPiece.y] >= 'A' && chessBoard[userGetPiece.x][userGetPiece.y] <= 'Z')) {
+			(!isWhiteTurn && chessBoard[userGetPiece.x][userGetPiece.y] >= 'A' && chessBoard[userGetPiece.x][userGetPiece.y] <= 'Z')) {
 
 			std::cout << "Invalid input. You're trying to get an opp's piece." << std::endl;
 			isGettingAPiece = false;
-
 		}
 
 	} while (!isGettingAPiece);
+	
+	return userGetPiece;
+
+}
+
+Position setPieceByUser(char chessBoard[BOARD_SIZE][BOARD_SIZE], bool isWhiteTurn) 
+{
+
+	Position userSetPiece;
+
+	bool isSettingAPiece = true;
+
+	do {
+
+		bool isSettingAPiece = false;
+
+				////Pedir al jugador dónde mover
+		std::cout << "Altura a la cual mover: ";            //Pide una altura a la que mover
+		std::cout << "X: ";
+		std::cin >> userSetPiece.x;							//Registra el ancho dicho por el usuario
+		std::cout << "Posición a lo ancho donde mover: ";   //Pide el ancho al cual mover
+		std::cout << "Y: ";
+		std::cin >> userSetPiece.y;										//Registra la altura dicha por el usuario
 
 
+		userSetPiece.x--;
+		userSetPiece.y--;
 
+		userSetPiece.y = BOARD_SIZE - userSetPiece.y;
+
+
+		if (userSetPiece.x < 0 && userSetPiece.x > BOARD_SIZE || userSetPiece.y < 1 && userSetPiece.y > BOARD_SIZE) {
+
+			std::cout << "Invalid input. Out of bounds." << std::endl;
+			isSettingAPiece = false;
+
+		}
+		else if (isWhiteTurn && chessBoard[userSetPiece.x][userSetPiece.y] >= 'a' && chessBoard[userSetPiece.x][userSetPiece.y] <= 'z' ||
+			!isWhiteTurn && chessBoard[userSetPiece.x][userSetPiece.y] >= 'A' && chessBoard[userSetPiece.x][userSetPiece.y] <= 'Z') 
+			 {
+			 	std::cout << "Invalid input. You're trying to get an opp's piece." << std::endl;
+			 	isSettingAPiece = false;
+			 }
+
+
+	} while (!isSettingAPiece); 
+
+	return userSetPiece;
 }

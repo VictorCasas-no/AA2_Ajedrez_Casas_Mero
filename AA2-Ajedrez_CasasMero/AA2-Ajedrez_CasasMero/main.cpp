@@ -37,24 +37,6 @@ int main() {
 
 
 
-#pragma region Turnos;
-
-		//Indicar turnos
-		std::cout << std::endl;                                                 //Finaliza línea previamente
-		std::cout << "---------------------------------" << std::endl;
-		std::cout << "Turno de Jugador " << turnoJugador << std::endl;          //Texto para mostrar el turno correspondiente
-		std::cout << "---------------------------------" << std::endl;
-
-
-		//Cambios de turno
-		if (turnoJugador == 1) {        //Condicional que cambia el turno del 1 al 2 cada vez que finaliza una ronda
-			turnoJugador = 2;
-		}
-		else {
-			turnoJugador = 1;           //Y si tenía turno el 2, cambia al 1
-		}
-
-#pragma endregion;
 
 		bool isGettingAPiece = false;
 

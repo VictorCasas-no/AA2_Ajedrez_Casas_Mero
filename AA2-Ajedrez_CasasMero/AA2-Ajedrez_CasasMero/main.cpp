@@ -12,6 +12,8 @@ int main() {
 
 	bool gameOver = false;
 
+	bool isWhiteTurn = true;
+
 	short turnoJugador = 1;
 
 	int x;
@@ -31,12 +33,9 @@ int main() {
 
 		Position userGetPiece, userSetPiece;
 
-		userGetPiece = getPieceByUser();
+		userGetPiece = getPieceByUser(chessBoard, isWhiteTurn);
 
-		userGetPiece.x--;
-		userGetPiece.y--;
 
-		userGetPiece.y = BOARD_SIZE - userGetPiece.y;
 
 #pragma region Turnos;
 
@@ -59,36 +58,6 @@ int main() {
 
 		bool isGettingAPiece = false;
 
-		do {
-
-			//Pedir al jugador ficha
-			std::cout << std::endl;								//Añade una línea vacía entre el tablero y lo siguiente
-			std::cout << "Elige una pieza: ";                   //Pide una altura a la que atacar
-			std::cout << "X: ";									//Posición X que el usuario indica
-			std::cin >> getPieceByUser.x;                       //Registra la altura dicha por el usuario
-			std::cout << "Y: ";									//Pide una Y que el usuario indica
-			std::cin >> getPieceByUser.y;
-
-
-			//Pedir al jugador dónde mover
-			std::cout << "Altura a la cual mover: ";            //Pide una altura a la que mover
-			std::cin >> x;										//Registra el ancho dicho por el usuario
-			std::cout << "Posición a lo ancho donde mover: ";   //Pide el ancho al cual mover
-			std::cin >> y;										//Registra la altura dicha por el usuario
-
-
-			if (userGetPiece.x < 0 && userGetPiece.x > BOARD_SIZE || userGetPiece.y < 1 && userGetPiece.y > BOARD_SIZE) {
-
-				std::cout << "Invalid input" << std::endl;
-
-			}
-			else {
-
-				isGettingAPiece = true;
-
-			}
-
-		} while (!isGettingAPiece);
 
 
 	} while (!gameOver);

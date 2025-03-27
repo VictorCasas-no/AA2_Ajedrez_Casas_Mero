@@ -1,5 +1,7 @@
 
-#pragma region Includes;
+#pragma region 
+
+// Includes
 
 #include "Const.h"
 #include "Board.h"
@@ -16,16 +18,9 @@ int main() {
 
 	short turnoJugador = 1;
 
-	int x;
-	int y;
-
 	char chessBoard[BOARD_SIZE][BOARD_SIZE];
 
 	initChessBoard(chessBoard);
-
-	viewChessBoard(chessBoard);
-
-
 
 	do {
 
@@ -34,6 +29,7 @@ int main() {
 		Position userGetPiece, userSetPiece;
 
 		userGetPiece = getPieceByUser(chessBoard, isWhiteTurn);
+		userSetPiece = setPieceByUser(chessBoard, isWhiteTurn); 
 
 
 

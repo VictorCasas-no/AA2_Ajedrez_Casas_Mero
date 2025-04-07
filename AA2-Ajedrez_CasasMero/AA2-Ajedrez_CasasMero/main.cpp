@@ -54,14 +54,15 @@ int main() {
 
 			if (chessBoard[userGetPiece.x][userGetPiece.y] == EMPTY && chessBoard[userSetPiece.x][userSetPiece.y] == EMPTY) {
 
-				chessBoard[userSetPiece.x][userSetPiece.y] = userGetPiece;                                        
+				chessBoard[userSetPiece.x][userSetPiece.y] = chessBoard[userGetPiece.x][userGetPiece.y];
+				chessBoard[userGetPiece.x][userGetPiece.y] = ' ';
 				std::cout << "You've moved to " << "X: " << userSetPiece.x << " Y: " << userSetPiece.y << std::endl;                           
 			}
 			else {  
 
 				chessBoard[userSetPiece.x][userSetPiece.y] != EMPTY; 
 
-				std::cout << "There's already a piece in that position. Try again." << std::endl;              
+					std::cout << "There's already a piece in that position. Try again." << std::endl;              
 				if (turnoJugador == 1) {
 					turnoJugador = 2;
 				}
@@ -75,7 +76,26 @@ int main() {
 		for (int i = 0; i < BOARD_SIZE; i++) {                              //Crea i, e incrementa hasta el tamaño del tablero
 			for (int j = 0; j < BOARD_SIZE; j++) {                          //Crea j, e incrementa hasta el tamaño del tablero
 				if (chessBoard[i][j] = '*') {   //Condicional que dice que si no hay agua ni impacto...
-					std::cout << "Has movido a " << userSetPiece.x;                                  //Imprime ~ en vez de los números del principio (oculta los barcos)
+
+					if (chessBoard[userGetPiece.x][userGetPiece.y] == EMPTY && chessBoard[userSetPiece.x][userSetPiece.y] == EMPTY) {
+
+						chessBoard[userSetPiece.x][userSetPiece.y] = chessBoard[userGetPiece.x][userGetPiece.y];
+						chessBoard[userGetPiece.x][userGetPiece.y] = ' ';
+						std::cout << "You've moved to " << "X: " << userSetPiece.x << " Y: " << userSetPiece.y << std::endl;
+					}
+					else {
+
+						chessBoard[userSetPiece.x][userSetPiece.y] != EMPTY;
+
+						std::cout << "There's already a piece in that position. Try again." << std::endl;
+						if (turnoJugador == 1) {
+							turnoJugador = 2;
+						}
+						else if (turnoJugador == 2) {
+							turnoJugador = 1;
+						}
+					}
+
 				}
 				else {
 					std::cout << chessBoard[i][j] << " ";                 //Si no se cumple el condicional, imprime normal

@@ -22,6 +22,8 @@ int main() {
 
 	initChessBoard(chessBoard);
 
+
+
 	do {
 
 
@@ -48,11 +50,31 @@ int main() {
 		userGetPiece = getPieceByUser(chessBoard, isWhiteTurn);
 		userSetPiece = setPieceByUser(chessBoard, isWhiteTurn); 
 
+		char selectedPiece = chessBoard[userGetPiece.y][userGetPiece.x];
+
+		
+
+
+
+
+		//Peón se hace dama al llegar a la última fila
+		if (selectedPiece == WHITE_PAWN && userSetPiece.y == 0) {
+			chessBoard[userSetPiece.y][userSetPiece.x] = WHITE_QUEEN;
+			std::cout << "¡Peón blanco promovido a reina!" << std::endl;
+		}
+		else if (selectedPiece == BLACK_PAWN && userSetPiece.y == 7) {
+			chessBoard[userSetPiece.y][userSetPiece.x] = BLACK_QUEEN;
+			std::cout << "¡Peón negro promovido a reina!" << std::endl;
+		}
+
+
+
+
 
 		//Imprimir lo que haya puesto el jugador
 		if (turnoJugador == 1) { 
 
-			if (chessBoard[userGetPiece.x][userGetPiece.y] == EMPTY && chessBoard[userSetPiece.x][userSetPiece.y] == EMPTY) {
+			if (chessBoard[userGetPiece.x][userGetPiece.y] != EMPTY) {
 
 				chessBoard[userSetPiece.x][userSetPiece.y] = chessBoard[userGetPiece.x][userGetPiece.y];
 				chessBoard[userGetPiece.x][userGetPiece.y] = ' ';

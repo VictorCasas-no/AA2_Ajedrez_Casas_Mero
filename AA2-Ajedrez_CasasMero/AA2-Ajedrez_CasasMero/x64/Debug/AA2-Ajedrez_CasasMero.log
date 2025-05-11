@@ -1,4 +1,4 @@
 ﻿  main.cpp
-C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\main.cpp(63,48): warning C4552: '!=': result of expression not used
-C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\main.cpp(88,50): warning C4552: '!=': result of expression not used
-  AA2-Ajedrez_CasasMero.vcxproj -> C:\Users\VictorCasasAlvarez\Documents\GitHub\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe
+C:\Users\Víctor Casas\Desktop\AA2_Ajedrez_Casas_Mero\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\main.cpp(85,48): warning C4552: "!=": el resultado de la expresión no se usa
+C:\Users\Víctor Casas\Desktop\AA2_Ajedrez_Casas_Mero\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\AA2-Ajedrez_CasasMero\main.cpp(110,50): warning C4552: "!=": el resultado de la expresión no se usa
+  AA2-Ajedrez_CasasMero.vcxproj -> C:\Users\Víctor Casas\Desktop\AA2_Ajedrez_Casas_Mero\AA2_Ajedrez_Casas_Mero\AA2-Ajedrez_CasasMero\x64\Debug\AA2-Ajedrez_CasasMero.exe
